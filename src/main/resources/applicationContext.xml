@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean name="speakerRepository" class="com.bipin.respository.HibernateSpeakerRepoImpl">
+    </bean>
+    <bean name="speakerService" class="com.bipin.service.SpeakerServiceImpl" autowire="constructor">
+        <!--<property name="speakerRepository" ref="speakerRepository"></property>-->
+        <!--<constructor-arg index="0" ref="speakerRepository"></constructor-arg>-->
+    </bean>
+</beans>
